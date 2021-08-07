@@ -7,12 +7,12 @@ console.log('Created!!!!')
 const PORT = process.env.PORT || 8080
 
 
-bot.onText(/\/w (.+)/, (msg, match) => {
+bot.onText(/(.+)/, (msg, match) => {
 
 
     const chatId = msg.chat.id;
     const resp = match[1];
 
-    bot.sendMessage(chatId,'Helloworld')
+    bot.sendMessage(chatId,'Helloworld1')
 
 });
