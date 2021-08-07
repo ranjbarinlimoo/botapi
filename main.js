@@ -4,6 +4,7 @@ const fs = require('fs')
 const token = '1718858345:AAHDENdqpfXfoOnt7aEIhXmtUqgs0j6ZIMA';
 const bot = new TelegramBot(token, {polling: true});
 console.log('Created!!!!')
+const PORT = process.env.PORT || 8080
 
 
 bot.onText(/\/w (.+)/, (msg, match) => {
