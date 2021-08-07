@@ -8,7 +8,7 @@ console.log('Created!!!!')
 const port = process.env.PORT || 3000
 const app = express()
 app.listen(port)
-let lastId
+let lastId = 70607680
 
 bot.onText(/(.+)/, (msg, match) => {
 
