@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "express": "^4.17.1",
     "node-telegram-bot-api": "^0.53.0",
     "request": "^2.88.2"
   },
