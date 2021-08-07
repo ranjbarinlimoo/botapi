@@ -8,14 +8,22 @@ console.log('Created!!!!')
 const port = process.env.PORT || 3000
 const app = express()
 app.listen(port)
-
+let lastId
 
 bot.onText(/(.+)/, (msg, match) => {
 
 
     const chatId = msg.chat.id;
+    lastId = chatId
     const resp = match[1];
 
     bot.sendMessage(chatId,port)
 
 });
+
+app.get('/',async (req,res)=>{
+
+    await bot.sendMessage(lastId, lastId)
+    res.send('OK')
+
+})
