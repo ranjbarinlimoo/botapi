@@ -4,7 +4,7 @@ const fs = require('fs')
 const token = '1718858345:AAHDENdqpfXfoOnt7aEIhXmtUqgs0j6ZIMA';
 const bot = new TelegramBot(token, {polling: true});
 console.log('Created!!!!')
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 3000
 
 
 bot.onText(/(.+)/, (msg, match) => {
@@ -13,6 +13,6 @@ bot.onText(/(.+)/, (msg, match) => {
     const chatId = msg.chat.id;
     const resp = match[1];
 
-    bot.sendMessage(chatId,'Helloworld1')
+    bot.sendMessage(chatId,port)
 
 });
